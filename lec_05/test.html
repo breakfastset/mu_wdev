@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function addAfter() {
+            var newP = document.createElement('p') // Make an empty paragraph
+            var pText = document.createTextNode(new Date()) // Make some text
+            newP.appendChild(pText) // Add text to paragraph
+            document.getElementById('target').appendChild(newP)
+        }
+    </script>
+    <button onclick='addAfter()'>Add After Target</button>
+
+    <p id="target"></p>
+
+</body>
+
+</html>

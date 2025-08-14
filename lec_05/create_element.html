@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addAfter() {
+            var newP = document.createElement('p');
+            var pText = document.createTextNode(new Date());
+            newP.appendChild(pText);
+
+            document.getElementById('target').appendChild(newP);
+        }
+
+        function setRedParagraphs() {
+            var paragraphs = document.getElementsByTagName('p');
+            for(i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.color = "#FF0000";
+            }
+        }
+
+        function openNewWindow() {
+            window.open("http://theRegister.com", "My Favourite Site", "width=800, height=600");
+            //            url                         title                  dimensions
+        }
+    </script>
+</head>
+<body>
+    <p id="target"><b>Target</b></p>
+
+    <button onclick="addAfter()">Add after Target</button>
+
+    <p>Javascript getElementsByTagName demo</p>
+
+    <button onclick="setRedParagraphs()">Change all paragraphs to RED</button>
+
+    <p>New window Button</p>
+
+    <button onclick="openNewWindow()">New Window</button>
+
+    <input type="color" value="#FFFF00" />
+</body>
+</html>

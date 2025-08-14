@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getMyLocation() {
+            if(navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else {
+                var x = document.getElementById("locationOutput");
+                x.innerHTML = "Geolocation is not supported by this browser";
+            }
+        }
+
+        function showPosition(position) {
+            var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+            var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon;
+            img_url += "&zoom=14&size=800x600&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU";
+            // var x = document.getElementById("locationOutput");
+            // x.innerHTML = "latitude: " + position.coords.latitude +
+            //     "<br>Longitude: " + position.coords.longitude;
+            mapID = document.getElementById("mapImg");
+            mapID.innerHTML = "<img src='" + img_url + "''>";
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="button" value="Show Location" onclick="getMyLocation()" />
+        Location: <div id="mapImg">Not yet known!</p>
+    </form>
+</body>
+</html>
