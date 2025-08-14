@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let output = "";
+        // while loop
+
+        // 1. preempt loop
+        // 2. while condition is True
+        // 3.    statements
+        // 4.    update condition till it is false
+
+        let count = 1;    // 1. preempt the loop
+        while (count <= 3) {   // 2. while condition is true
+            output = output + count + " ";    // 3. statement
+            count = count + 1;                    // 4. update condition
+        }
+
+        alert(output);
+
+        let output2 = "";
+        // for loop
+        // for (1. init; 2. condition; 4. increment) {
+        //     3. statements
+        // }
+        // 1 -> 2 -> 3 -> 4 -> 2 -> 3 -> 4 -> 2 -> 3 -> 4 -> 2 (2 is false) exit loop
+        for(let i = 0; i < 5; i++) {
+            output2 = output2 + " - " + i;
+        }
+        
+        alert(output2);
+
+
+    </script>
+</body>
+</html>

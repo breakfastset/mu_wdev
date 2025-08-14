@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ComputeCost() {
+            let costPerTicket = 17.5, tickets, totalCost, output;
+
+            tickets = document.getElementById("numTickets").value;
+            totalCost = costPerTicket * tickets;
+
+            output = "$" + totalCost.toFixed(2);
+
+            if (totalCost > 1000) {
+                totalCost = totalCost * 0.9;   // apply 10 % discount
+                output = output + "<br/>" + "Discounted cost: $" + totalCost.toFixed(2);
+            } else {
+                output = output + "<br/>" + "No discount applied!";
+            }
+
+            document.getElementById("totalCost").innerHTML =  output;  
+        }
+    </script>
+</head>
+<body>
+    <form action="" method="get" onsubmit="return false;">
+        <table>
+            <tr>
+                <td>Number of tickets</td>
+                <td><input type="number" name="numTickets" id="numTickets"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="ComputeCost()">Buy tickets!</button></td>
+            </tr>
+            <tr>
+                <td>Cost of tickets: </td>
+                <td><span id="totalCost">&nbsp; ??</span></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

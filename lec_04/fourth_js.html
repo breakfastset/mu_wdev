@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function computeCost() {
+            let costPerTicket, tickets, totalCost;
+            costPerTicket = 17.5;
+            tickets = document.getElementById("numTickets").value;
+            totalCost = costPerTicket * tickets;
+
+            document.getElementById("myTotalCost").innerHTML = "Total Cost: " + totalCost;
+        }
+    </script>
+</head>
+<body>
+    <form action="get">
+        <table>
+            <tr><td>How many tickets</td><td><input type="text" id="numTickets"></td></tr>
+            <tr>
+                <td colspan="2"><button type="button" id="cost" onclick="computeCost()">Compute Cost</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><p id="myTotalCost">Cost</p></td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>

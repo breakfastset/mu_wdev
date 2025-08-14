@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function computeCost() {
+            let costPerTicket, tickets, totalCost;
+            costPerTicket = 17.5;
+            tickets = window.prompt("Number of tickets: ");
+            totalCost = costPerTicket * tickets;
+
+            window.alert("Total Cost: " + totalCost);
+        }
+    </script>
+</head>
+<body>
+    <form action="get">
+        <button type="button" id="cost" onclick="computeCost()">Compute Cost</button>
+    </form>
+    
+</body>
+</html>

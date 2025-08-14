@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ComputeCost() {
+            let costPerTicket = 17.5, tickets, totalCost;
+
+            tickets = prompt("Number of tickets: ");
+            totalCost = costPerTicket * tickets;
+
+            alert("Total cost: $" + totalCost.toFixed(2));   // 2 decimal places
+        }
+    </script>
+
+</head>
+<body>
+    <form action="nextpage.html" method="get" onsubmit="return false;">
+        <button onclick="ComputeCost()">Buy tickets!</button>
+    </form>
+    
+</body>
+</html>
