@@ -1,0 +1,15 @@
+        li {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        li.electronics {
+            background-color: chartreuse;
+        }
+        li.programming {
+            color: chocolate;
+        }
+        .superbold {
+            font-weight: bolder;
+            font-size: 20px;
+            font-style: oblique;
+        }
